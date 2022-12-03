@@ -1,0 +1,62 @@
+﻿@*@model List<Business.Models.ProductModel>*@
+@model IEnumerable<ProductModel>
+@{
+    ViewData["Title"] = "Products";
+}
+@*<h3>@ViewData["Title"]</h3>*@
+<h3>@ViewBag.Title</h3>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.ExpirationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.StockAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.UnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.CategoryId)
+        </th>
+
+
+    </tr>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>
+                @*@product.Name*@
+                @Html.DisplayFor(modelItem => product.Name)
+            </td>
+            <td>
+                @*@product.Name*@
+                @Html.DisplayFor(modelItem => product.Description)
+            </td>
+            <td>
+                @*@product.Name*@
+                @Html.DisplayFor(modelItem => product.ExpirationDate)
+            </td>
+            <td>
+                @*@product.Name*@
+                @Html.DisplayFor(modelItem => product.StockAmount)
+            </td>
+            <td>
+                @*@product.Name*@
+                @Html.DisplayFor(modelItem => product.UnitPrice)
+            </td>
+            <td>
+                @*@product.Name*@
+                @Html.DisplayFor(modelItem => product.CategoryId)
+            </td>
+        </tr>
+    }
+</table>
+
